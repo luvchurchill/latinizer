@@ -1,0 +1,16 @@
+' input your first name then press enter then input ur last name'''
+def latinize():
+    fname = input("")
+    lname = input("")
+    new_fname = fname[:-2]
+    new_lname = lname[:-2]
+    f = "ius"
+    l = "um"
+    new_fname+=f
+    new_lname +=l
+    return new_fname + " " + new_lname
+    
+    
+t = latinize()
+print(t)
+    
