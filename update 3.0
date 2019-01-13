@@ -1,0 +1,24 @@
+from random import randint
+
+def latinize():
+    fname = input("")
+    lname = input("")
+    firstNameSuffixes = ["icus", "cus", "us", "enius", "cum"]
+    firstNamesListLength = len(firstNameSuffixes);
+
+    lastNameSuffixes = ["um", "us", "elius", "renius", "rel"]
+    lastNamesListLength = len(lastNameSuffixes);
+    
+    new_fname = fname[:-2]
+    new_lname = lname[:-2]
+    f = firstNameSuffixes[randint(0, firstNamesListLength-1)]
+    l = lastNameSuffixes[randint(0, lastNamesListLength-1)]
+    new_fname+=f
+    new_lname +=l
+    return new_fname + " " + new_lname
+
+
+
+
+t = latinize()
+print(t)
