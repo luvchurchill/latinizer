@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Program
+{
+    public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+        
+        //Enter Your Name, Fist name on First Line, Last Name on Second Line.
+        
+        String FirstName = scan.next();
+        String LastName = scan.next();
+        
+        String[] fns = {"icus", "cus", "us", "enius", "cum"};
+        String[] lns = {"um", "us", "elius", "renius", "rel"};
+        
+        Random rand = new Random();
+
+        FirstName += fns[rand.nextInt(4)];
+        LastName += lns[rand.nextInt(4)];
+        
+        System.out.println(FirstName+" "+LastName);  
+        
+	}
+}
